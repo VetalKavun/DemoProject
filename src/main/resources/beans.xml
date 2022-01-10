@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="simpleBean1" class="code.spring.configlesson.SimpleBean" init-method="init" p:age="12" p:name="Harry"/>
+    <bean id="simpleBean2" class="code.spring.configlesson.SimpleBean" init-method="init" p:age="34" p:name="Tom"/>
+    <bean id="simpleBean3" class="code.spring.configlesson.SimpleBean" init-method="init" p:age="23" p:name="Jerry"/>
+
+    <bean id="initBean1" class="code.spring.configlesson.SimpleBeanImpl" p:age="23" p:name="Dirk"/>
+    <bean id="initBean2" class="code.spring.configlesson.SimpleBeanImpl" p:age="24" p:name="Mark"/>
+    <bean id="initBean3" class="code.spring.configlesson.SimpleBeanImpl" p:age="25" p:name="Clark"/>
+
+</beans>
