@@ -2,8 +2,14 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="
-        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:annotation-config/>
 
     <bean id="simpleBean1" class="code.spring.configlesson.SimpleBean" init-method="init" p:age="12" p:name="Harry"/>
     <bean id="simpleBean2" class="code.spring.configlesson.SimpleBean" init-method="init" p:age="34" p:name="Tom"/>
@@ -12,5 +18,9 @@
     <bean id="initBean1" class="code.spring.configlesson.SimpleBeanImpl" p:age="23" p:name="Dirk"/>
     <bean id="initBean2" class="code.spring.configlesson.SimpleBeanImpl" p:age="24" p:name="Mark"/>
     <bean id="initBean3" class="code.spring.configlesson.SimpleBeanImpl" p:age="25" p:name="Clark"/>
+
+    <bean id="initJSR1" class="code.spring.configlesson.SimpleBeanJSR250" p:age="45" p:name="James"/>
+    <bean id="initJSR2" class="code.spring.configlesson.SimpleBeanJSR250" p:age="234" p:name="Tom"/>
+    <bean id="initJSR3" class="code.spring.configlesson.SimpleBeanJSR250" p:age="252" p:name="Clark"/>
 
 </beans>
